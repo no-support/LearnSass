@@ -1,0 +1,41 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #999;
+  line-height: 1.5;
+  background-color: gold;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: yellow;
+}
+@media (max-width: 767px) {
+  .container {
+    background-color: pink;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    background-color: aqua;
+  }
+}
+
+.book__title {
+  font-size: 1.5rem;
+}
+.book__cover {
+  width: calc(100px + 2rem);
+}
+.book__info {
+  display: inline-flex;
+}
+.book__summary {
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=index.css.map */

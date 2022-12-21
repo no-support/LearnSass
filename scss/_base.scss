@@ -1,0 +1,10 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #999;
+$bg-color: gold;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  line-height: 1.5;
+  background-color: $bg-color;
+}

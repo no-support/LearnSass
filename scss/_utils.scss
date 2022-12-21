@@ -1,0 +1,46 @@
+@use "sass:math";
+$rootUnit: 16px !default;
+
+@function removeUnit($value) {
+  // @return ($value / ($value * 0 + 1));
+  @return math.div($value, $value * 0 + 1);
+}
+
+@function rem($value, $base: $rootUnit) {
+  @return (removeUnit(math.div($value, $base))) * 1rem;
+}
+
+@mixin flexboxCenter(
+  $direction: row,
+  $justify: center,
+  $items: center,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $items;
+}
+
+@mixin autoMargin($marginX: auto) {
+  margin-left: $marginX;
+  margin-right: $marginX;
+}
+
+@mixin marginX($marginX: 0) {
+  margin-left: $marginX;
+  margin-right: $marginX;
+}
+
+$break: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$break - 1}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$break}) {
+    @content;
+  }
+}

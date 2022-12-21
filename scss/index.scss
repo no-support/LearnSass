@@ -1,0 +1,34 @@
+@import "base";
+@import "utils";
+
+.container {
+  @include flexboxCenter($wrap: wrap);
+  @include marginX(50px);
+  background-color: yellow;
+
+  @include mobile {
+    background-color: pink;
+  }
+
+  @include desktop {
+    background-color: aqua;
+  }
+}
+
+.book {
+  &__title {
+    font-size: rem(24px);
+  }
+
+  &__cover {
+    width: calc(100px + 2rem);
+  }
+
+  &__info {
+    display: inline-flex;
+  }
+
+  &__summary {
+    line-height: 1.5;
+  }
+}
